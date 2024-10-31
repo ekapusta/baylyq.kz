@@ -26,6 +26,14 @@
             -moz-text-size-adjust: none;
             -webkit-text-size-adjust: none;
             text-size-adjust: none;
+
+          --color-default: #212121;
+          --color-primary: #44cf65;
+          --color-accent: #ff9800;
+          --color-danger: #f44336;
+
+          --color-container: white;
+          --color-surface: whitesmoke;
         }
 
         body {
@@ -134,6 +142,145 @@
             padding-right: 1rem;
         }
 
+        .section {
+          padding: 1rem 0;
+        }
+
+        .section-title {
+          margin-bottom: 1rem;
+        }
+
+        .row {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+        .row.is-autosize {
+          flex-wrap: nowrap;
+        }
+        .row:not(.is-no-gutter) {
+          margin-left: -1rem;
+          margin-right: -1rem;
+        }
+        .column {
+          display: block;
+          width: 100%
+        }
+        .row:not(.is-no-gutter) .column {
+          padding: 0 1rem
+        }
+
+        .text-accent {
+          color: var(--color-accent);
+        }
+
+        .header {
+          background-color: var(--color-container);
+          box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.1);
+          position: relative;
+          z-index: 1;
+        }
+        .toolbar {
+          display: flex;
+          flex-direction: row;
+          gap: 1rem;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .logo {
+          display: flex;
+          flex-direction: row;
+          gap: 1rem;
+          align-items: center;
+          user-select: none;
+        }
+
+        .logo-icon {
+          background-color: var(--color-primary);
+          display: block;
+          height: 2.75rem;
+          width: 2.75rem;
+          padding: 0.35rem;
+          border-radius: 0.25rem;
+        }
+
+        .brand {
+          text-transform: uppercase;
+          font-size: 1.75rem;
+          font-weight: 600;
+          color: var(--color-primary);
+        }
+
+        .nav {
+          display: flex;
+          flex-direction: row;
+          gap: 1rem;
+        }
+
+        .nav-link {
+          display: block;
+          padding: 1rem 0;
+          text-decoration: none;
+          text-transform: uppercase;
+          color: var(--color-primary);
+        }
+        .nav-link:hover {
+          text-decoration: underline;
+        }
+
+        .promo {
+          padding: 2rem 0;
+          background-color: var(--color-surface);
+        }
+        .promo-title {
+          text-align: center;
+          font-weight: 600;
+          font-size: 1.5rem;
+        }
+        .card {
+          display: block;
+          padding: 1rem;
+          background-color: var(--color-container);
+        }
+        .footer {
+          background-color: var(--color-surface);
+          padding: 1rem 0;
+        }
+        .footer-menu {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+        .footer-link {
+          display: block;
+          color: var(--color-default);
+        }
+        .footer-group {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+        .footer-contact {
+          font-weight: bold;
+          color: var(--color-primary);
+        }
+
+        .section {
+          margin: 1rem 0;
+        }
+
+        .box {
+          background-color: var(--color-surface);
+          padding: 1rem;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          margin-bottom: 1rem;
+        }
+
+
+
         @media (min-width: 600px) and (max-width: 839.98px) and (orientation: portrait) {
             .container {
                 max-width: 788px;
@@ -157,11 +304,371 @@
                 max-width: 1200px;
             }
         }
+
+        @media (min-width: 0) and (orientation: portrait),(min-width: 0) and (orientation: landscape) {
+          .handset {
+            flex:1 0 0
+          }
+          [class="handset-*"] {
+            flex: 0 0 auto
+          }
+          .handset-1 {
+            width: 8.333%
+          }
+          .ohandset-1 {
+            margin-left: 8.333%
+          }
+          .handset-2 {
+            width: 16.667%
+          }
+          .ohandset-2 {
+            margin-left: 16.667%
+          }
+          .handset-3 {
+            width: 25%
+          }
+          .ohandset-3 {
+            margin-left: 25%
+          }
+          .handset-4 {
+            width: 33.333%
+          }
+          .ohandset-4 {
+            margin-left: 33.333%
+          }
+          .handset-5 {
+            width: 41.667%
+          }
+          .ohandset-5 {
+            margin-left: 41.667%
+          }
+          .handset-6 {
+            width: 50%
+          }
+          .ohandset-6 {
+            margin-left: 50%
+          }
+          .handset-7 {
+            width: 58.333%
+          }
+          .ohandset-7 {
+            margin-left: 58.333%
+          }
+          .handset-8 {
+            width: 66.667%
+          }
+          .ohandset-8 {
+            margin-left: 66.667%
+          }
+          .handset-9 {
+            width: 75%
+          }
+          .ohandset-9 {
+            margin-left: 75%
+          }
+          .handset-10 {
+            width: 83.333%
+          }
+          .ohandset-10 {
+            margin-left: 83.333%
+          }
+          .handset-11 {
+            width: 91.667%
+          }
+          .ohandset-11 {
+            margin-left: 91.667%
+          }
+          .handset-12 {
+            width: 100%
+          }
+          .ohandset-12 {
+            margin-left: 100%
+          }
+        }
+
+        @media (min-width: 600px) and (orientation: portrait), (min-width: 960px) and (orientation: landscape) {
+          .tablet {
+            flex:1 0 0
+          }
+          [class="tablet-*"] {
+            flex: 0 0 auto
+          }
+          .tablet-1 {
+            width: 8.333%
+          }
+          .otablet-1 {
+            margin-left: 8.333%
+          }
+          .tablet-2 {
+            width: 16.667%
+          }
+          .otablet-2 {
+            margin-left: 16.667%
+          }
+          .tablet-3 {
+            width: 25%
+          }
+          .otablet-3 {
+            margin-left: 25%
+          }
+          .tablet-4 {
+            width: 33.333%
+          }
+          .otablet-4 {
+            margin-left: 33.333%
+          }
+          .tablet-5 {
+            width: 41.667%
+          }
+          .otablet-5 {
+            margin-left: 41.667%
+          }
+          .tablet-6 {
+            width: 50%
+          }
+          .otablet-6 {
+            margin-left: 50%
+          }
+          .tablet-7 {
+            width: 58.333%
+          }
+          .otablet-7 {
+            margin-left: 58.333%
+          }
+          .tablet-8 {
+            width: 66.667%
+          }
+          .otablet-8 {
+            margin-left: 66.667%
+          }
+          .tablet-9 {
+            width: 75%
+          }
+          .otablet-9 {
+            margin-left: 75%
+          }
+          .tablet-10 {
+            width: 83.333%
+          }
+          .otablet-10 {
+            margin-left: 83.333%
+          }
+          .tablet-11 {
+            width: 91.667%
+          }
+          .otablet-11 {
+            margin-left: 91.667%
+          }
+          .tablet-12 {
+            width: 100%
+          }
+          .otablet-12 {
+            margin-left: 100%
+          }
+
+          .section {
+            margin: 2rem 0;
+          }
+          .promo-title {
+            font-size: 1.75rem;
+          }
+          .card {
+            padding: 2rem;
+          }
+          .footer {
+            padding: 2rem 0;
+          }
+        }
+
+        @media (min-width: 840px) and (orientation: portrait), (min-width: 1280px) and (orientation: landscape) {
+          .web {
+            flex:1 0 0
+          }
+          [class="web-*"] {
+            flex: 0 0 auto
+          }
+          .web-1 {
+            width: 8.333%
+          }
+          .oweb-1 {
+            margin-left: 8.333%
+          }
+          .web-2 {
+            width: 16.667%
+          }
+          .oweb-2 {
+            margin-left: 16.667%
+          }
+          .web-3 {
+            width: 25%
+          }
+          .oweb-3 {
+            margin-left: 25%
+          }
+          .web-4 {
+            width: 33.333%
+          }
+          .oweb-4 {
+            margin-left: 33.333%
+          }
+          .web-5 {
+            width: 41.667%
+          }
+          .oweb-5 {
+            margin-left: 41.667%
+          }
+          .web-6 {
+            width: 50%
+          }
+          .oweb-6 {
+            margin-left: 50%
+          }
+          .web-7 {
+            width: 58.333%
+          }
+          .oweb-7 {
+            margin-left: 58.333%
+          }
+          .web-8 {
+            width: 66.667%
+          }
+          .oweb-8 {
+            margin-left: 66.667%
+          }
+          .web-9 {
+            width: 75%
+          }
+          .oweb-9 {
+            margin-left: 75%
+          }
+          .web-10 {
+            width: 83.333%
+          }
+          .oweb-10 {
+            margin-left: 83.333%
+          }
+          .web-11 {
+            width: 91.667%
+          }
+          .oweb-11 {
+            margin-left: 91.667%
+          }
+          .web-12 {
+            width: 100%
+          }
+          .oweb-12 {
+            margin-left: 100%
+          }
+          .margin {
+            padding: 3rem 0;
+          }
+          .section-title {
+            margin-bottom: 2rem;
+          }
+          .promo-title {
+            font-size: 2rem;
+          }
+          .card {
+            padding: 3rem;
+          }
+        }
     </style>
+  <script>
+    let matrix;
+
+    function init() {
+      matrix = createMatrix();
+    }
+
+    function createMatrix() {
+      console.log('sss');
+      return {};
+    }
+
+    document.addEventListener("DOMContentLoaded", init);
+  </script>
 </head>
 <body>
-<div class="container">
-    <h1>Baylyq.kz - Займ онлайн за 10 минут!</h1>
-</div>
+<header class="header">
+  <div class="container">
+    <div class="toolbar">
+      <div class="logo">
+        <svg class="logo-icon" width="38.976864" height="24.14325" viewBox="0 0 38.976864 24.14325" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#fff" d="M 17.5377 24.1433 L 21.7869 1.1e-05 L 33.6847 1.1e-05 C 35.5646 1.1e-05 36.9166 0.321921 37.7407 0.965741 C 38.5648 1.60956 38.9769 2.60104 38.9769 3.94019 C 38.9769 6.00041 38.5133 7.64859 37.5862 8.88473 C 36.6849 10.0951 35.6676 10.8419 34.5345 11.1252 L 34.4959 11.357 C 35.7578 11.5888 36.6462 12.1167 37.1613 12.9408 C 37.7021 13.7649 37.9725 14.7692 37.9725 15.9539 C 37.9725 17.396 37.7021 18.748 37.1613 20.0099 C 36.6462 21.2461 35.8479 22.2504 34.7663 23.023 C 33.7104 23.7698 32.3713 24.1433 30.7488 24.1433 Z M 20.2803 1.73833 L 3.94017 1.1e-05 L 20.5894 1.1e-05 Z M 19.6623 5.44673 L 3.28348 3.70841 L 19.9327 3.70841 Z M 27.5426 8.88473 L 29.8217 8.88473 C 30.4913 8.88473 30.9549 8.6272 31.2124 8.11214 C 31.4699 7.59709 31.5987 7.01765 31.5987 6.37383 C 31.5987 6.03904 31.5214 5.78151 31.3669 5.60125 C 31.2124 5.39522 30.9291 5.29221 30.5171 5.29221 L 28.1993 5.29221 Z M 19.0056 9.15513 L 2.62678 7.41682 L 19.3146 7.41682 Z M 18.3489 12.8635 L 1.97008 11.1252 L 18.6579 11.1252 Z M 25.8429 18.4648 L 28.7015 18.4648 C 29.3968 18.4648 29.899 18.1944 30.208 17.6536 C 30.5171 17.1127 30.6716 16.4818 30.6716 15.7607 C 30.6716 15.4002 30.5814 15.104 30.4012 14.8723 C 30.2209 14.6405 29.899 14.5246 29.4354 14.5246 L 26.5383 14.5246 Z M 17.6922 16.5719 L 1.31339 14.8336 L 18.0012 14.8336 Z M 17.0355 20.2803 L 0.656691 18.542 L 17.3445 18.542 Z M 16.3788 24.0274 L -5e-06 22.2891 L 16.6878 22.2891 Z"/>
+        </svg>
+        <div class="brand">Baylyq</div>
+      </div>
+      <nav class="nav">
+        <a class="nav-link" href="/">Главная</a>
+        <a class="nav-link" href="/#about">О компании</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<main>
+  <div class="promo">
+    <div class="container">
+      <h1 class="promo-title">Первый <span class="text-accent">займ - бесплатно</span> всем!</h1>
+      <div class="card">
+        <div class="row">
+          <div class="column tablet-8 web-9">left</div>
+          <div class="column tablet-4 web-3">right</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Почему стоит выбрать Loaney</h2>
+      <div class="row">
+        <div class="column tablet-6 web-4">
+          <div class="box">
+            <div class="box-title">Мгновенное одобрение</div>
+            <div class="box-description">Получите одобрение сразу после заполнения заявки</div>
+          </div>
+        </div>
+
+        <div class="column tablet-6 web-4">
+          <div class="box">
+            <div class="box-title">Полностью цифровой процесс</div>
+            <div class="box-description">Простая заявка на получение займа онлайн без офлайн-бумаг</div>
+          </div>
+        </div>
+
+        <div class="column tablet-6 web-4">
+          <div class="box">
+            <div class="box-title">Безопасность</div>
+            <div class="box-description">Мы храним и обрабатываем ваши данные безопасно и в соответствии с законами</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">При подаче заявления имейте под рукой следующее:</h2>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="column tablet-6">
+        <div class="footer-group">
+          <div class="footer-copyright">© 2024, Baylyq.kz | Все права защищены</div>
+          <div class="footer-description">Baylyq.kz: быстрые и простые онлайн займы для всех. Baylyq инновационная финансовая платформа с полной прозрачностью для наших клиентов.</div>
+          <div class="footer-contacts">email: <a class="footer-contact" href="mailto:info@baylyq.kz">info@baylyq.kz</a></div>
+        </div>
+      </div>
+      <div class="column tablet-6">
+        <nav class="footer-menu">
+          <a class="footer-link" href="/">Главная</a>
+          <a class="footer-link" href="/#about">О компании</a>
+          <a class="footer-link" href="/#details">Реквизиты</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
